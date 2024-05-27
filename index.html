@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Bootstrap css-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Ubuntu', sans-serif !important;
+	font-weight: 300 !important;
+}
+ main {
+	width: 100%;
+	display: flex;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+.container-fluid {
+	width: 100%;
+	height: 100%;
+	display: block;
+	text-align: center;
+	justify-content: center;
+}
+form {
+	text-align: left;
+}
+@media (min-width: 768px) {
+	main {max-width: 420px;}
+}
+</style>
+</head>
+<body class="bg-light">
+<main class="m-auto">
+<section class="container-fluid p-4">
+<div class="container bg-light border shadow py-4">
+<img src="avatar.png" width="80"/>
+<h2 class="text-primary pt-2">L@s Praba</h2>
+<div>
+	<div class="spinner-grow spinner-grow-sm text-danger"></div>
+	<div class="spinner-grow spinner-grow-sm text-warning"></div>
+	<div class="spinner-grow spinner-grow-sm text-success"></div>
+	<div class="spinner-grow spinner-grow-sm text-primary"></div>
+	<div class="spinner-grow spinner-grow-sm text-info"></div>
+	<div class="spinner-grow spinner-grow-sm text-secondary"></div>
+</div>
+<p align="justify">Menerima Jasa Las dan Jasa Pembuatan Pagar Pintu Tralis Kanopi dan Lainnya.
+<br>Untuk informasi lebih lengkap, Silakan kirim Pesan juga Komentar pada Kami.</p>
+<div class="text-start" id="web">
+<form class="p-2" action="https://script.google.com/macros/s/AKfycbwAWvImKUmpssAPZmjapFpVWGe0iRZMusJ58OUx9DHg0Su_KMVixFiiZjgA6Pc2P8RM/exec" method="post">
+	<label>Name</label>
+	<input class="w-100 mb-2 px-2" name="Name" type="text" required>
+	<label>Phone</label>
+	<input class="w-100 mb-2 px-2" name="Phone" type="text" required placeholder="isi agar dpt menerima balasan pesan">
+	<label>Message</label>
+	<textarea class="w-100 mb-4 px-2" rows="5" name="Message" type="text" required placeholder="tulis dan sampaikan pesan Anda"></textarea>
+	<input class="btn btn-danger w-25"  type="submit" value="Send">
+</form>
+<p align="justify">Untuk informasi dengan respon cepat silakan chat langsung via whatsapp</p>
+<P class="btn btn-success mx-2" onclick="document.getElementById('web').style.display=('none');document.getElementById('wa').style.display=('block');">Chat Whatsapp</P>
+</div>
+<form class="p-4 border"style="display:none" id="wa">
+	<p align="right"><a href="" class="btn text-danger">close</a></p>
+	<label>Name</label>
+	<input class="aa w-100 mb-2 px-2" type="text" required>
+	<label>Phone</label>
+	<input class="bb w-100 mb-2 px-2" type="text" required>
+	<label>Message</label>
+	<textarea class="cc w-100 mb-4 px-2" rows="5" type="text" required placeholder="tulis dan sampaikan pesan Anda"></textarea>
+	<input class="btn btn-success" value="Send" onclick="send()"/>
+</form>
+</div>
+</section>
+</main>
+<script>
+function send(){
+       var aa = document.querySelector(".aa").value;
+       var bb = document.querySelector(".bb").value;
+       var cc = document.querySelector(".cc").value;
+
+       var url = "https://wa.me/+ 6281383421166 ?text="
+       +"*INFO MESSAGE FROM*%0a%0a"
+       +"*NAME :*%0a         "+aa+"%0a%0a"
+       +"*PHONE :*%0a         "+bb+"%0a%0a"
+       +"*MESSAGE :*%0a         "+cc+"%0a%0a";
+
+       window.open(url, '_blank').focus(); }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
